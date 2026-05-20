@@ -1,0 +1,27 @@
+{
+  "name": "smartpark-azure-digital-twin",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Gemelo digital de SmartPark sobre Azure Digital Twins: ontologia DTDL, grafo, modelo 3D segmentado, simulador IoT y capa de integracion. Por Apex Twin.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "gen:glb": "node model3d/generate-garage-glb.mjs",
+    "gen:scene": "node model3d/generate-scenes-config.mjs",
+    "gen:all": "npm run gen:glb && npm run gen:scene",
+    "seed": "node scripts/03-seed-graph.mjs",
+    "seed:delete": "node scripts/03-seed-graph.mjs --delete",
+    "simulate": "node simulator/index.mjs",
+    "verify": "node scripts/verify-graph.mjs"
+  },
+  "dependencies": {
+    "@azure/digital-twins-core": "^1.1.0",
+    "@azure/identity": "^4.5.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}
