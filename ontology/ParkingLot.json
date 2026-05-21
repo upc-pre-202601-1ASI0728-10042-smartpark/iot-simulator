@@ -1,0 +1,20 @@
+{
+  "@context": "dtmi:dtdl:context;3",
+  "@id": "dtmi:com:apextwin:smartpark:ParkingLot;1",
+  "@type": "Interface",
+  "displayName": "Parking Lot",
+  "description": "Raiz del grafo: representa el estacionamiento completo de un centro comercial.",
+  "contents": [
+    { "@type": "Property", "name": "displayName", "schema": "string", "writable": true },
+    { "@type": "Property", "name": "address", "schema": "string", "writable": true },
+    { "@type": "Property", "name": "totalSpaces", "schema": "integer", "writable": true },
+    { "@type": "Property", "name": "occupiedSpaces", "schema": "integer", "writable": true },
+    { "@type": "Property", "name": "occupancyRate", "schema": "double", "writable": true, "description": "0..1" },
+    {
+      "@type": "Relationship",
+      "name": "hasLevel",
+      "displayName": "tiene nivel",
+      "target": "dtmi:com:apextwin:smartpark:ParkingLevel;1"
+    }
+  ]
+}
