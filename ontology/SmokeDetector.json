@@ -1,0 +1,22 @@
+{
+  "@context": "dtmi:dtdl:context;3",
+  "@id": "dtmi:com:apextwin:smartpark:SmokeDetector;1",
+  "@type": "Interface",
+  "displayName": "Smoke Detector",
+  "description": "Detector de humo asociado a un nivel/zona. Dispara la cadena de alerta de Safety & Incidents.",
+  "contents": [
+    { "@type": "Property", "name": "code", "schema": "string", "writable": true },
+    { "@type": "Property", "name": "smokeDetected", "schema": "boolean", "writable": true },
+    { "@type": "Property", "name": "smokeLevel", "schema": "double", "writable": true, "description": "Concentracion en ppm." },
+    {
+      "@type": "Property", "name": "status", "writable": true,
+      "schema": { "@type": "Enum", "valueSchema": "string", "enumValues": [
+        { "name": "Normal", "displayName": "Normal", "enumValue": "Normal" },
+        { "name": "Warning", "displayName": "Advertencia", "enumValue": "Warning" },
+        { "name": "Alert", "displayName": "Alerta", "enumValue": "Alert" }
+      ]}
+    },
+    { "@type": "Property", "name": "lastReading", "schema": "dateTime", "writable": true },
+    { "@type": "Telemetry", "name": "smokeReading", "schema": "double" }
+  ]
+}
