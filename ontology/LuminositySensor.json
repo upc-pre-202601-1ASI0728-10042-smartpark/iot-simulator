@@ -1,0 +1,13 @@
+{
+  "@context": "dtmi:dtdl:context;3",
+  "@id": "dtmi:com:apextwin:smartpark:LuminositySensor;1",
+  "@type": "Interface",
+  "displayName": "Luminosity Sensor",
+  "description": "Sensor de luminosidad ambiental por zona. Alimenta las recomendaciones de eficiencia energetica.",
+  "contents": [
+    { "@type": "Property", "name": "code", "schema": "string", "writable": true },
+    { "@type": "Property", "name": "luminosity", "schema": "double", "writable": true, "description": "Lux." },
+    { "@type": "Property", "name": "lastReading", "schema": "dateTime", "writable": true },
+    { "@type": "Telemetry", "name": "luminosityReading", "schema": "double" }
+  ]
+}
