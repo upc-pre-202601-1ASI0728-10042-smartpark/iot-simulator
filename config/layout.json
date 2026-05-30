@@ -1,0 +1,29 @@
+{
+  "$comment": "FUENTE DE VERDAD UNICA. Consumida por el generador 3D, el sembrador del grafo y el generador de escena. dtId == nombre de malla del .glb. Topologia coherente de garaje: aparcamiento al fondo (z<0) en dos zonas con un aisle central; foso de maniobra al frente (z>0) con rampa helicoidal centrada y casetas de acceso en las esquinas frontales. Cambiar coordenadas aqui NO afecta el grafo de ADT (los twins no guardan posicion), solo el modelo 3D.",
+  "lot": {
+    "dtId": "LOT-JOCKEY",
+    "displayName": "Jockey Plaza - Estacionamiento",
+    "address": "Av. Javier Prado Este 4200, Santiago de Surco, Lima",
+    "geometry": { "width": 34, "depth": 58, "levelHeight": 7 }
+  },
+  "spaceTypes": { "regularRatio": 0.85, "disabledEvery": 12, "evEvery": 9 },
+  "levels": [
+    { "levelNumber": 1, "name": "Nivel 1 (Calle / Ingreso)", "y": 0 },
+    { "levelNumber": 2, "name": "Azotea (Nivel 2)", "y": 7 }
+  ],
+  "zonesPerLevel": [
+    { "code": "A", "originX": -12.8, "originZ": -13, "color": "norte" },
+    { "code": "B", "originX": 2.6,   "originZ": -13, "color": "sur" }
+  ],
+  "spacesPerZone": { "rows": 2, "cols": 4, "spaceW": 2.4, "spaceD": 5.0, "aisle": 8.0, "gap": 0.2 },
+  "sensors": {
+    "smokeDetectorPerZone": true,
+    "luminositySensorPerZone": true,
+    "lightingZonePerZone": true,
+    "accessPointsPerLevel": [
+      { "suffix": "ENT", "type": "Entry" },
+      { "suffix": "EXT", "type": "Exit" }
+    ],
+    "rampPerLevelTransition": true
+  }
+}
