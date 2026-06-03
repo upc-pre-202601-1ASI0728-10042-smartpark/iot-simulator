@@ -1,0 +1,774 @@
+{
+  "$schema": "https://github.com/microsoft/iot-cardboard-js/tree/main/schemas/3DScenesConfiguration/v1.0.0/3DScenesConfiguration.schema.json",
+  "configuration": {
+    "scenes": [
+      {
+        "id": "a68c0ef6-cde9-4a26-815c-61539de93dc9",
+        "displayName": "SmartPark - Jockey Plaza",
+        "description": "Gemelo digital 3D del estacionamiento (generado por Apex Twin).",
+        "assets": [
+          {
+            "type": "3DAsset",
+            "url": "https://stsmartparkvhrz.blob.core.windows.net/3dscenes/parking-garage.glb"
+          }
+        ],
+        "elements": [
+          {
+            "type": "TwinToObjectMapping",
+            "id": "bc86082a-9788-4693-8cbc-9c34222e9bd3",
+            "displayName": "LEVEL-1",
+            "primaryTwinID": "LEVEL-1",
+            "objectIDs": [
+              "LEVEL-1"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "3607129b-d8a1-4ffd-96f5-f5a6caebee46",
+            "displayName": "LEVEL-2",
+            "primaryTwinID": "LEVEL-2",
+            "objectIDs": [
+              "LEVEL-2"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "44c4835c-9712-4288-9bf0-a9a56309f6d4",
+            "displayName": "ZONE-L1-A",
+            "primaryTwinID": "ZONE-L1-A",
+            "objectIDs": [
+              "ZONE-L1-A"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "3bb0bb14-0981-4179-bd17-fccb40850885",
+            "displayName": "ZONE-L1-B",
+            "primaryTwinID": "ZONE-L1-B",
+            "objectIDs": [
+              "ZONE-L1-B"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "b79cc2f0-2ed7-4b73-9c4f-d0663f33403e",
+            "displayName": "ZONE-L2-A",
+            "primaryTwinID": "ZONE-L2-A",
+            "objectIDs": [
+              "ZONE-L2-A"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "4e019884-c2e0-42cf-b149-b2457237a274",
+            "displayName": "ZONE-L2-B",
+            "primaryTwinID": "ZONE-L2-B",
+            "objectIDs": [
+              "ZONE-L2-B"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "c0fc01c9-618b-43a5-9348-74621cbb9cd3",
+            "displayName": "SPACE-L1-A01",
+            "primaryTwinID": "SPACE-L1-A01",
+            "objectIDs": [
+              "SPACE-L1-A01"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "208b4605-cd5d-49a1-a61f-cabb74fa81dc",
+            "displayName": "SPACE-L1-A02",
+            "primaryTwinID": "SPACE-L1-A02",
+            "objectIDs": [
+              "SPACE-L1-A02"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "206b4582-d062-4290-9485-69695f2361ae",
+            "displayName": "SPACE-L1-A03",
+            "primaryTwinID": "SPACE-L1-A03",
+            "objectIDs": [
+              "SPACE-L1-A03"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "c4159326-ae8e-4fd9-9ad7-3f072edeeab2",
+            "displayName": "SPACE-L1-A04",
+            "primaryTwinID": "SPACE-L1-A04",
+            "objectIDs": [
+              "SPACE-L1-A04"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "0f108447-ea35-4c7b-9964-d512ac400446",
+            "displayName": "SPACE-L1-A05",
+            "primaryTwinID": "SPACE-L1-A05",
+            "objectIDs": [
+              "SPACE-L1-A05"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "8d5a601e-e13b-450e-a9b6-73454786f05c",
+            "displayName": "SPACE-L1-A06",
+            "primaryTwinID": "SPACE-L1-A06",
+            "objectIDs": [
+              "SPACE-L1-A06"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "168ebc5b-d206-44e3-b174-1814ef5ab37e",
+            "displayName": "SPACE-L1-A07",
+            "primaryTwinID": "SPACE-L1-A07",
+            "objectIDs": [
+              "SPACE-L1-A07"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "d7bfc187-a14b-4839-9ea5-6f14af400fba",
+            "displayName": "SPACE-L1-A08",
+            "primaryTwinID": "SPACE-L1-A08",
+            "objectIDs": [
+              "SPACE-L1-A08"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "48d5b32a-6b60-4233-b4f2-ab8d3929c9fb",
+            "displayName": "SPACE-L1-B01",
+            "primaryTwinID": "SPACE-L1-B01",
+            "objectIDs": [
+              "SPACE-L1-B01"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "96439004-34ac-4716-9c5c-6e6b65dc0559",
+            "displayName": "SPACE-L1-B02",
+            "primaryTwinID": "SPACE-L1-B02",
+            "objectIDs": [
+              "SPACE-L1-B02"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "b35171cf-17cc-4292-8b35-04c0c6d32691",
+            "displayName": "SPACE-L1-B03",
+            "primaryTwinID": "SPACE-L1-B03",
+            "objectIDs": [
+              "SPACE-L1-B03"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "8e2261e0-13d1-426c-bef4-227c0bc61b0d",
+            "displayName": "SPACE-L1-B04",
+            "primaryTwinID": "SPACE-L1-B04",
+            "objectIDs": [
+              "SPACE-L1-B04"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "ba2cedd0-2d0e-4848-96ff-d2201a62d9c1",
+            "displayName": "SPACE-L1-B05",
+            "primaryTwinID": "SPACE-L1-B05",
+            "objectIDs": [
+              "SPACE-L1-B05"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "aa172ac3-505f-487c-a63d-aa3f708f50aa",
+            "displayName": "SPACE-L1-B06",
+            "primaryTwinID": "SPACE-L1-B06",
+            "objectIDs": [
+              "SPACE-L1-B06"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "8f0a0a8a-056e-4a9f-a8ff-45cc1c10228c",
+            "displayName": "SPACE-L1-B07",
+            "primaryTwinID": "SPACE-L1-B07",
+            "objectIDs": [
+              "SPACE-L1-B07"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "43f0e847-c187-496c-93dd-2c10a286faf5",
+            "displayName": "SPACE-L1-B08",
+            "primaryTwinID": "SPACE-L1-B08",
+            "objectIDs": [
+              "SPACE-L1-B08"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "adc50839-e17a-4439-a8e5-b8ecf6f093fd",
+            "displayName": "SPACE-L2-A01",
+            "primaryTwinID": "SPACE-L2-A01",
+            "objectIDs": [
+              "SPACE-L2-A01"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "1279f2cb-998c-4b8b-a400-ed355a6f6b46",
+            "displayName": "SPACE-L2-A02",
+            "primaryTwinID": "SPACE-L2-A02",
+            "objectIDs": [
+              "SPACE-L2-A02"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "983dd6e5-20b3-4f89-8598-c01e85e20bd4",
+            "displayName": "SPACE-L2-A03",
+            "primaryTwinID": "SPACE-L2-A03",
+            "objectIDs": [
+              "SPACE-L2-A03"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "a9ea2fc3-938c-44b2-8833-f0af08fe3e06",
+            "displayName": "SPACE-L2-A04",
+            "primaryTwinID": "SPACE-L2-A04",
+            "objectIDs": [
+              "SPACE-L2-A04"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "77c85d92-ff03-4019-84f1-bae1f38e38bc",
+            "displayName": "SPACE-L2-A05",
+            "primaryTwinID": "SPACE-L2-A05",
+            "objectIDs": [
+              "SPACE-L2-A05"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "d0cc3fd3-fad4-48dd-86ce-4d3007f1bde8",
+            "displayName": "SPACE-L2-A06",
+            "primaryTwinID": "SPACE-L2-A06",
+            "objectIDs": [
+              "SPACE-L2-A06"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "be4fbb74-6e6e-4484-96e9-f4a0cce4ab77",
+            "displayName": "SPACE-L2-A07",
+            "primaryTwinID": "SPACE-L2-A07",
+            "objectIDs": [
+              "SPACE-L2-A07"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "25afe107-d419-480e-b0df-65f070d3e6f3",
+            "displayName": "SPACE-L2-A08",
+            "primaryTwinID": "SPACE-L2-A08",
+            "objectIDs": [
+              "SPACE-L2-A08"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "6547a7f3-7713-434a-bdbb-a9b1ebdbc2dd",
+            "displayName": "SPACE-L2-B01",
+            "primaryTwinID": "SPACE-L2-B01",
+            "objectIDs": [
+              "SPACE-L2-B01"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "3b8ec359-fa89-4ee8-9391-1477ddbecfa2",
+            "displayName": "SPACE-L2-B02",
+            "primaryTwinID": "SPACE-L2-B02",
+            "objectIDs": [
+              "SPACE-L2-B02"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "e00f5183-92d4-4c16-ba4b-163f9d403580",
+            "displayName": "SPACE-L2-B03",
+            "primaryTwinID": "SPACE-L2-B03",
+            "objectIDs": [
+              "SPACE-L2-B03"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "af249bf2-a8f5-45a1-b716-9296dd8ec9eb",
+            "displayName": "SPACE-L2-B04",
+            "primaryTwinID": "SPACE-L2-B04",
+            "objectIDs": [
+              "SPACE-L2-B04"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "211334fb-b6e4-4348-8a99-377f42340c16",
+            "displayName": "SPACE-L2-B05",
+            "primaryTwinID": "SPACE-L2-B05",
+            "objectIDs": [
+              "SPACE-L2-B05"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "4f7a079f-feed-4e8c-a1c3-ee71e518e654",
+            "displayName": "SPACE-L2-B06",
+            "primaryTwinID": "SPACE-L2-B06",
+            "objectIDs": [
+              "SPACE-L2-B06"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "d71c3953-1673-4e2e-b3b1-5a1af720f36a",
+            "displayName": "SPACE-L2-B07",
+            "primaryTwinID": "SPACE-L2-B07",
+            "objectIDs": [
+              "SPACE-L2-B07"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "642d35bc-ba5f-44c9-b013-2768cfa44d10",
+            "displayName": "SPACE-L2-B08",
+            "primaryTwinID": "SPACE-L2-B08",
+            "objectIDs": [
+              "SPACE-L2-B08"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "5f684017-10eb-41c3-be8a-d7c432362e13",
+            "displayName": "SMOKE-L1-A",
+            "primaryTwinID": "SMOKE-L1-A",
+            "objectIDs": [
+              "SMOKE-L1-A"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "e5146662-9b05-432f-a50d-fd6dca841e40",
+            "displayName": "SMOKE-L1-B",
+            "primaryTwinID": "SMOKE-L1-B",
+            "objectIDs": [
+              "SMOKE-L1-B"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "4721562f-975e-4258-9b1d-80ccda1312cb",
+            "displayName": "SMOKE-L2-A",
+            "primaryTwinID": "SMOKE-L2-A",
+            "objectIDs": [
+              "SMOKE-L2-A"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "5fcc1552-1cdc-4070-a56b-76ed895fc9e2",
+            "displayName": "SMOKE-L2-B",
+            "primaryTwinID": "SMOKE-L2-B",
+            "objectIDs": [
+              "SMOKE-L2-B"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "10ebd4b1-2614-4c6c-8a36-c06294933a2e",
+            "displayName": "LIGHT-L1-A",
+            "primaryTwinID": "LIGHT-L1-A",
+            "objectIDs": [
+              "LIGHT-L1-A"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "dfb58624-f650-4fca-8575-6052cb45a88e",
+            "displayName": "LIGHT-L1-B",
+            "primaryTwinID": "LIGHT-L1-B",
+            "objectIDs": [
+              "LIGHT-L1-B"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "36a2d46a-878d-4779-8f16-aca1a3681e6b",
+            "displayName": "LIGHT-L2-A",
+            "primaryTwinID": "LIGHT-L2-A",
+            "objectIDs": [
+              "LIGHT-L2-A"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "b27f3b35-35d6-49ed-ad1e-1c2220626326",
+            "displayName": "LIGHT-L2-B",
+            "primaryTwinID": "LIGHT-L2-B",
+            "objectIDs": [
+              "LIGHT-L2-B"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "812b2c18-8649-46e5-a216-62e548814453",
+            "displayName": "ACCESS-L1-ENT",
+            "primaryTwinID": "ACCESS-L1-ENT",
+            "objectIDs": [
+              "ACCESS-L1-ENT"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "78034064-58c0-49b8-8ec4-d7486aa06322",
+            "displayName": "ACCESS-L1-EXT",
+            "primaryTwinID": "ACCESS-L1-EXT",
+            "objectIDs": [
+              "ACCESS-L1-EXT"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "eba6d191-dfc1-40f9-bbdc-61ecd64acb1a",
+            "displayName": "ACCESS-L2-ENT",
+            "primaryTwinID": "ACCESS-L2-ENT",
+            "objectIDs": [
+              "ACCESS-L2-ENT"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "824580ab-01d0-4713-81f8-15f5a78566d5",
+            "displayName": "ACCESS-L2-EXT",
+            "primaryTwinID": "ACCESS-L2-EXT",
+            "objectIDs": [
+              "ACCESS-L2-EXT"
+            ]
+          },
+          {
+            "type": "TwinToObjectMapping",
+            "id": "cbf17ee7-f41d-47f4-9feb-7000a66f0b4d",
+            "displayName": "RAMP-L1-L2",
+            "primaryTwinID": "RAMP-L1-L2",
+            "objectIDs": [
+              "RAMP-L1-L2"
+            ]
+          }
+        ],
+        "behaviorIDs": [
+          "beh-occupancy",
+          "beh-zone-occupancy",
+          "beh-smoke",
+          "beh-energy"
+        ],
+        "pollingConfiguration": {
+          "minimumPollingFrequency": 5000
+        }
+      }
+    ],
+    "behaviors": [
+      {
+        "id": "beh-occupancy",
+        "displayName": "Ocupacion de plazas",
+        "datasources": [
+          {
+            "type": "ElementTwinToObjectMappingDataSource",
+            "elementIDs": [
+              "c0fc01c9-618b-43a5-9348-74621cbb9cd3",
+              "208b4605-cd5d-49a1-a61f-cabb74fa81dc",
+              "206b4582-d062-4290-9485-69695f2361ae",
+              "c4159326-ae8e-4fd9-9ad7-3f072edeeab2",
+              "0f108447-ea35-4c7b-9964-d512ac400446",
+              "8d5a601e-e13b-450e-a9b6-73454786f05c",
+              "168ebc5b-d206-44e3-b174-1814ef5ab37e",
+              "d7bfc187-a14b-4839-9ea5-6f14af400fba",
+              "48d5b32a-6b60-4233-b4f2-ab8d3929c9fb",
+              "96439004-34ac-4716-9c5c-6e6b65dc0559",
+              "b35171cf-17cc-4292-8b35-04c0c6d32691",
+              "8e2261e0-13d1-426c-bef4-227c0bc61b0d",
+              "ba2cedd0-2d0e-4848-96ff-d2201a62d9c1",
+              "aa172ac3-505f-487c-a63d-aa3f708f50aa",
+              "8f0a0a8a-056e-4a9f-a8ff-45cc1c10228c",
+              "43f0e847-c187-496c-93dd-2c10a286faf5",
+              "adc50839-e17a-4439-a8e5-b8ecf6f093fd",
+              "1279f2cb-998c-4b8b-a400-ed355a6f6b46",
+              "983dd6e5-20b3-4f89-8598-c01e85e20bd4",
+              "a9ea2fc3-938c-44b2-8833-f0af08fe3e06",
+              "77c85d92-ff03-4019-84f1-bae1f38e38bc",
+              "d0cc3fd3-fad4-48dd-86ce-4d3007f1bde8",
+              "be4fbb74-6e6e-4484-96e9-f4a0cce4ab77",
+              "25afe107-d419-480e-b0df-65f070d3e6f3",
+              "6547a7f3-7713-434a-bdbb-a9b1ebdbc2dd",
+              "3b8ec359-fa89-4ee8-9391-1477ddbecfa2",
+              "e00f5183-92d4-4c16-ba4b-163f9d403580",
+              "af249bf2-a8f5-45a1-b716-9296dd8ec9eb",
+              "211334fb-b6e4-4348-8a99-377f42340c16",
+              "4f7a079f-feed-4e8c-a1c3-ee71e518e654",
+              "d71c3953-1673-4e2e-b3b1-5a1af720f36a",
+              "642d35bc-ba5f-44c9-b013-2768cfa44d10"
+            ]
+          }
+        ],
+        "visuals": [
+          {
+            "type": "ExpressionRangeVisual",
+            "id": "f8e5a716-5fda-48a0-a4d2-88d6b4ac30b2",
+            "valueExpression": "PrimaryTwin.occupancyState",
+            "expressionType": "CategoricalValues",
+            "objectIDs": {
+              "expression": "objectIDs"
+            },
+            "valueRanges": [
+              {
+                "id": "0cddfcbc-a633-4b76-83c2-4b5fd2d3262e",
+                "values": [
+                  "Occupied"
+                ],
+                "visual": {
+                  "color": "#D62828"
+                }
+              },
+              {
+                "id": "e4cce195-d584-4d8e-9d88-6d07e114baa6",
+                "values": [
+                  "Reserved"
+                ],
+                "visual": {
+                  "color": "#F2A900"
+                }
+              },
+              {
+                "id": "70fdd7e9-a05a-45bf-8dd5-8498e24918ce",
+                "values": [
+                  "Free"
+                ],
+                "visual": {
+                  "color": "#2E933C"
+                }
+              },
+              {
+                "id": "0271d33e-87e8-4ccd-b890-4fb24082b59d",
+                "values": [
+                  "OutOfService"
+                ],
+                "visual": {
+                  "color": "#6C757D"
+                }
+              }
+            ]
+          }
+        ],
+        "twinAliases": []
+      },
+      {
+        "id": "beh-zone-occupancy",
+        "displayName": "Ocupacion por zona",
+        "datasources": [
+          {
+            "type": "ElementTwinToObjectMappingDataSource",
+            "elementIDs": [
+              "44c4835c-9712-4288-9bf0-a9a56309f6d4",
+              "3bb0bb14-0981-4179-bd17-fccb40850885",
+              "b79cc2f0-2ed7-4b73-9c4f-d0663f33403e",
+              "4e019884-c2e0-42cf-b149-b2457237a274"
+            ]
+          }
+        ],
+        "visuals": [
+          {
+            "type": "ExpressionRangeVisual",
+            "id": "975adac6-491b-49a6-a03c-435d5c145567",
+            "valueExpression": "PrimaryTwin.occupancyRate",
+            "expressionType": "NumericRange",
+            "objectIDs": {
+              "expression": "objectIDs"
+            },
+            "valueRanges": [
+              {
+                "id": "67b24631-555c-4944-87de-db75ff186713",
+                "values": [
+                  0,
+                  0.6
+                ],
+                "visual": {
+                  "color": "#2E933C"
+                }
+              },
+              {
+                "id": "ec322d54-ae91-41f0-a950-a4007b275757",
+                "values": [
+                  0.6,
+                  0.85
+                ],
+                "visual": {
+                  "color": "#F2A900"
+                }
+              },
+              {
+                "id": "e90c18a8-40ed-48a9-a239-4576a69236d7",
+                "values": [
+                  0.85,
+                  1.01
+                ],
+                "visual": {
+                  "color": "#D62828"
+                }
+              }
+            ]
+          }
+        ],
+        "twinAliases": []
+      },
+      {
+        "id": "beh-smoke",
+        "displayName": "Alerta de humo",
+        "datasources": [
+          {
+            "type": "ElementTwinToObjectMappingDataSource",
+            "elementIDs": [
+              "5f684017-10eb-41c3-be8a-d7c432362e13",
+              "e5146662-9b05-432f-a50d-fd6dca841e40",
+              "4721562f-975e-4258-9b1d-80ccda1312cb",
+              "5fcc1552-1cdc-4070-a56b-76ed895fc9e2"
+            ]
+          }
+        ],
+        "visuals": [
+          {
+            "type": "ExpressionRangeVisual",
+            "id": "8bce33a1-9ec0-45e3-ba08-f06c089e7e72",
+            "valueExpression": "PrimaryTwin.smokeDetected",
+            "expressionType": "CategoricalValues",
+            "objectIDs": {
+              "expression": "objectIDs"
+            },
+            "valueRanges": [
+              {
+                "id": "9f406274-0dd9-4757-bc2c-4650536652d2",
+                "values": [
+                  true
+                ],
+                "visual": {
+                  "color": "#FF4D4D",
+                  "iconName": "Warning",
+                  "labelExpression": "\"HUMO DETECTADO\""
+                }
+              },
+              {
+                "id": "7e6bf64b-9ae8-4105-aa04-74dec4b64597",
+                "values": [
+                  false
+                ],
+                "visual": {
+                  "color": "#2E933C"
+                }
+              }
+            ]
+          }
+        ],
+        "twinAliases": []
+      },
+      {
+        "id": "beh-energy",
+        "displayName": "Eficiencia energetica",
+        "datasources": [
+          {
+            "type": "ElementTwinToObjectMappingDataSource",
+            "elementIDs": [
+              "10ebd4b1-2614-4c6c-8a36-c06294933a2e",
+              "dfb58624-f650-4fca-8575-6052cb45a88e",
+              "36a2d46a-878d-4779-8f16-aca1a3681e6b",
+              "b27f3b35-35d6-49ed-ad1e-1c2220626326"
+            ]
+          }
+        ],
+        "visuals": [
+          {
+            "type": "ExpressionRangeVisual",
+            "id": "cb2255fd-e414-463c-b0dd-9bd4fea1c245",
+            "valueExpression": "PrimaryTwin.currentLevel",
+            "expressionType": "NumericRange",
+            "objectIDs": {
+              "expression": "objectIDs"
+            },
+            "valueRanges": [
+              {
+                "id": "1f599469-3987-45cb-8e51-22790fd01e09",
+                "values": [
+                  0,
+                  40
+                ],
+                "visual": {
+                  "color": "#3A506B"
+                }
+              },
+              {
+                "id": "21fc35f2-1336-4a84-b8ec-18a9bf901ed5",
+                "values": [
+                  40,
+                  80
+                ],
+                "visual": {
+                  "color": "#F2A900"
+                }
+              },
+              {
+                "id": "ab6a2ea5-445b-48ab-9acb-2494baba1b10",
+                "values": [
+                  80,
+                  101
+                ],
+                "visual": {
+                  "color": "#FFD166"
+                }
+              }
+            ]
+          }
+        ],
+        "twinAliases": []
+      }
+    ],
+    "layers": [
+      {
+        "id": "b7c7ccdd-6390-4b48-9240-18d5cfaf933d",
+        "displayName": "Operaciones",
+        "behaviorIDs": [
+          "beh-occupancy",
+          "beh-zone-occupancy"
+        ]
+      },
+      {
+        "id": "024443c3-f246-4191-9782-7a5a1b7a557d",
+        "displayName": "Seguridad",
+        "behaviorIDs": [
+          "beh-smoke"
+        ]
+      },
+      {
+        "id": "b9229f7b-7824-4523-94e3-e09e28e252fd",
+        "displayName": "Energia",
+        "behaviorIDs": [
+          "beh-energy"
+        ]
+      }
+    ]
+  }
+}
