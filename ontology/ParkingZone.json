@@ -1,0 +1,23 @@
+{
+  "@context": "dtmi:dtdl:context;3",
+  "@id": "dtmi:com:apextwin:smartpark:ParkingZone;1",
+  "@type": "Interface",
+  "displayName": "Parking Zone",
+  "description": "Agrupacion de plazas dentro de un nivel (ej. Zona A). Unidad de coloreo del mapa de ocupacion.",
+  "contents": [
+    { "@type": "Property", "name": "code", "schema": "string", "writable": true },
+    { "@type": "Property", "name": "totalSpaces", "schema": "integer", "writable": true },
+    { "@type": "Property", "name": "occupiedSpaces", "schema": "integer", "writable": true },
+    { "@type": "Property", "name": "occupancyRate", "schema": "double", "writable": true },
+    {
+      "@type": "Property", "name": "congestionLevel", "writable": true,
+      "schema": { "@type": "Enum", "valueSchema": "string", "enumValues": [
+        { "name": "Low", "displayName": "Baja", "enumValue": "Low" },
+        { "name": "Moderate", "displayName": "Moderada", "enumValue": "Moderate" },
+        { "name": "High", "displayName": "Alta", "enumValue": "High" }
+      ]}
+    },
+    { "@type": "Relationship", "name": "hasSpace", "displayName": "tiene plaza", "target": "dtmi:com:apextwin:smartpark:ParkingSpace;1" },
+    { "@type": "Relationship", "name": "hasLightingZone", "displayName": "tiene zona de iluminacion", "target": "dtmi:com:apextwin:smartpark:LightingZone;1" }
+  ]
+}

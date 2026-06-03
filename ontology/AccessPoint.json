@@ -1,0 +1,27 @@
+{
+  "@context": "dtmi:dtdl:context;3",
+  "@id": "dtmi:com:apextwin:smartpark:AccessPoint;1",
+  "@type": "Interface",
+  "displayName": "Access Point",
+  "description": "Punto de acceso vehicular (entrada/salida) de un nivel.",
+  "contents": [
+    { "@type": "Property", "name": "code", "schema": "string", "writable": true },
+    {
+      "@type": "Property", "name": "type", "writable": true,
+      "schema": { "@type": "Enum", "valueSchema": "string", "enumValues": [
+        { "name": "Entry", "displayName": "Entrada", "enumValue": "Entry" },
+        { "name": "Exit", "displayName": "Salida", "enumValue": "Exit" }
+      ]}
+    },
+    { "@type": "Property", "name": "vehicleCount", "schema": "integer", "writable": true },
+    {
+      "@type": "Property", "name": "status", "writable": true,
+      "schema": { "@type": "Enum", "valueSchema": "string", "enumValues": [
+        { "name": "Open", "displayName": "Abierto", "enumValue": "Open" },
+        { "name": "Closed", "displayName": "Cerrado", "enumValue": "Closed" },
+        { "name": "Congested", "displayName": "Congestionado", "enumValue": "Congested" }
+      ]}
+    },
+    { "@type": "Telemetry", "name": "vehiclePassed", "schema": "string" }
+  ]
+}

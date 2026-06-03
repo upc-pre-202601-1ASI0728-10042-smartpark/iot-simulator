@@ -1,0 +1,18 @@
+{
+  "@context": "dtmi:dtdl:context;3",
+  "@id": "dtmi:com:apextwin:smartpark:ParkingLevel;1",
+  "@type": "Interface",
+  "displayName": "Parking Level",
+  "description": "Un nivel/piso del estacionamiento.",
+  "contents": [
+    { "@type": "Property", "name": "levelNumber", "schema": "integer", "writable": true },
+    { "@type": "Property", "name": "name", "schema": "string", "writable": true },
+    { "@type": "Property", "name": "totalSpaces", "schema": "integer", "writable": true },
+    { "@type": "Property", "name": "occupiedSpaces", "schema": "integer", "writable": true },
+    { "@type": "Property", "name": "occupancyRate", "schema": "double", "writable": true },
+    { "@type": "Relationship", "name": "hasZone", "displayName": "tiene zona", "target": "dtmi:com:apextwin:smartpark:ParkingZone;1" },
+    { "@type": "Relationship", "name": "hasAccessPoint", "displayName": "tiene acceso", "target": "dtmi:com:apextwin:smartpark:AccessPoint;1" },
+    { "@type": "Relationship", "name": "hasRamp", "displayName": "tiene rampa", "target": "dtmi:com:apextwin:smartpark:Ramp;1" },
+    { "@type": "Relationship", "name": "hasSmokeDetector", "displayName": "tiene detector de humo", "target": "dtmi:com:apextwin:smartpark:SmokeDetector;1" }
+  ]
+}

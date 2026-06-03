@@ -1,0 +1,21 @@
+{
+  "@context": "dtmi:dtdl:context;3",
+  "@id": "dtmi:com:apextwin:smartpark:LightingZone;1",
+  "@type": "Interface",
+  "displayName": "Lighting Zone",
+  "description": "Zona de iluminacion controlable. Energy Efficiency Management recomienda su atenuacion segun ocupacion.",
+  "contents": [
+    { "@type": "Property", "name": "code", "schema": "string", "writable": true },
+    { "@type": "Property", "name": "currentLevel", "schema": "double", "writable": true, "description": "Nivel de luz actual 0..100%." },
+    { "@type": "Property", "name": "recommendedLevel", "schema": "double", "writable": true, "description": "Nivel recomendado 0..100%." },
+    { "@type": "Property", "name": "savingsPercent", "schema": "double", "writable": true },
+    {
+      "@type": "Property", "name": "status", "writable": true,
+      "schema": { "@type": "Enum", "valueSchema": "string", "enumValues": [
+        { "name": "Optimal", "displayName": "Optimo", "enumValue": "Optimal" },
+        { "name": "DimmingRecommended", "displayName": "Atenuacion recomendada", "enumValue": "DimmingRecommended" }
+      ]}
+    },
+    { "@type": "Relationship", "name": "monitoredBy", "displayName": "monitoreada por", "target": "dtmi:com:apextwin:smartpark:LuminositySensor;1" }
+  ]
+}
