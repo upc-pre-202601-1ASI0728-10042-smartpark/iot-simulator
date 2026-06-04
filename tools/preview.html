@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>SmartPark - Preview 3D</title>
+<style>
+  html,body{margin:0;height:100%;background:#cdd6e0;}
+  model-viewer{width:100vw;height:100vh;--poster-color:transparent;}
+</style>
+<script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+</head>
+<body>
+<model-viewer id="mv"
+  src="./parking-garage.glb"
+  camera-controls
+  interaction-prompt="none"
+  tone-mapping="neutral"
+  shadow-intensity="1.2"
+  shadow-softness="0.8"
+  exposure="1.1"
+  environment-image="neutral"
+  camera-orbit="45deg 58deg 60m"
+  field-of-view="35deg"
+  min-camera-orbit="auto auto 5m"
+  max-camera-orbit="auto auto 200m">
+</model-viewer>
+<script>
+  const mv = document.getElementById('mv');
+  window.__loaded = false;
+  mv.addEventListener('load', () => { window.__loaded = true; });
+  mv.addEventListener('error', (e) => { window.__error = String(e.detail || e); });
+  // API para que Playwright fije camara y reencuadre
+  window.setView = (orbit, target, fov) => {
+    if (orbit) mv.setAttribute('camera-orbit', orbit);
+    if (target) mv.setAttribute('camera-target', target);
+    if (fov) mv.setAttribute('field-of-view', fov);
+  };
+</script>
+</body>
+</html>
