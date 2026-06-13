@@ -1,0 +1,29 @@
+{
+  "@context": "dtmi:dtdl:context;3",
+  "@id": "dtmi:com:apextwin:smartpark:ParkingSpace;1",
+  "@type": "Interface",
+  "displayName": "Parking Space",
+  "description": "Plaza individual de estacionamiento. Es la hoja del grafo y la malla coloreable mas granular en el 3D.",
+  "contents": [
+    { "@type": "Property", "name": "code", "schema": "string", "writable": true },
+    {
+      "@type": "Property", "name": "occupancyState", "writable": true,
+      "schema": { "@type": "Enum", "valueSchema": "string", "enumValues": [
+        { "name": "Free", "displayName": "Libre", "enumValue": "Free" },
+        { "name": "Occupied", "displayName": "Ocupada", "enumValue": "Occupied" },
+        { "name": "Reserved", "displayName": "Reservada", "enumValue": "Reserved" },
+        { "name": "OutOfService", "displayName": "Fuera de servicio", "enumValue": "OutOfService" }
+      ]}
+    },
+    {
+      "@type": "Property", "name": "spaceType", "writable": true,
+      "schema": { "@type": "Enum", "valueSchema": "string", "enumValues": [
+        { "name": "Regular", "displayName": "Regular", "enumValue": "Regular" },
+        { "name": "Disabled", "displayName": "Discapacitado", "enumValue": "Disabled" },
+        { "name": "EV", "displayName": "Vehiculo electrico", "enumValue": "EV" }
+      ]}
+    },
+    { "@type": "Property", "name": "lastUpdated", "schema": "dateTime", "writable": true },
+    { "@type": "Telemetry", "name": "occupancyChanged", "schema": "string", "description": "Evento transitorio emitido al cambiar de estado." }
+  ]
+}

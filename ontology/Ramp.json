@@ -1,0 +1,21 @@
+{
+  "@context": "dtmi:dtdl:context;3",
+  "@id": "dtmi:com:apextwin:smartpark:Ramp;1",
+  "@type": "Interface",
+  "displayName": "Ramp",
+  "description": "Rampa interna que conecta niveles. Fuente de la deteccion de congestion de flujo vehicular.",
+  "contents": [
+    { "@type": "Property", "name": "code", "schema": "string", "writable": true },
+    { "@type": "Property", "name": "connectsLevels", "schema": "string", "writable": true },
+    { "@type": "Property", "name": "vehiclesPerMinute", "schema": "double", "writable": true },
+    {
+      "@type": "Property", "name": "flowStatus", "writable": true,
+      "schema": { "@type": "Enum", "valueSchema": "string", "enumValues": [
+        { "name": "Normal", "displayName": "Normal", "enumValue": "Normal" },
+        { "name": "Moderate", "displayName": "Moderado", "enumValue": "Moderate" },
+        { "name": "Severe", "displayName": "Severo", "enumValue": "Severe" }
+      ]}
+    },
+    { "@type": "Telemetry", "name": "flowReading", "schema": "double" }
+  ]
+}
