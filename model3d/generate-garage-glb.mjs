@@ -200,13 +200,15 @@ for(const cz of [-13,-4,5,15,24]) for(const cx of [-16.7,16.7]) columnAt(cx,cz,t
 for(const cx of [-holeX,holeX]) columnAt(cx,holeZf-1.0,topOf(1),GAP-SLAB);
 
 // --- Bahias VIVAS ---
-const matForType=(t)=> t==='Disabled'?MAT.spaceDis : t==='EV'?MAT.spaceEv : MAT.space;
+const baseColorForType=(t)=> t==='Disabled'?[0.30,0.50,0.88,1] : t==='EV'?[0.18,0.74,0.66,1] : [0.32,0.74,0.42,1];
 for(const z of model.zones){const top=topOf(parseInt(z.dtId.match(/L(\d)/)[1],10));
   const w=z.bounds.maxX-z.bounds.minX+0.7, d=z.bounds.maxZ-z.bounds.minZ+0.7;
   node(z.dtId, box(w,0.04,d), MAT.zone, {x:z.bounds.cx,y:top+0.02,z:z.bounds.cz});}
 for(const s of model.spaces){const top=topOf(s.levelNumber);
   node(deco(), box(s.w+0.16,0.03,s.d+0.16), MAT.paintW, {x:s.x,y:top+0.05,z:s.z});
-  node(s.dtId, box(s.w-0.06,0.10,s.d-0.06), matForType(s.props.spaceType), {x:s.x,y:top+0.10,z:s.z});}
+  // Material UNICO por espacio (nombre = dtId) para colorear la ocupacion en runtime (visor 3D).
+  def(s.dtId, baseColorForType(s.props.spaceType), 0.7);
+  node(s.dtId, box(s.w-0.06,0.10,s.d-0.06), MAT[s.dtId], {x:s.x,y:top+0.10,z:s.z});}
 
 // --- Bahias DECORATIVAS: una fila, via de servicio ancha (z=12) ---
 for(const num of [1,2]){const top=topOf(num);
