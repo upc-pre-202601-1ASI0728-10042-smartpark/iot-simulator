@@ -5,6 +5,16 @@ el Web Service (ASP.NET Core), que contiene el **Anti-Corruption Layer (ACL)** d
 contexto _Digital Twin Synchronization_. Así, si Azure cambia su SDK, solo se toca
 una clase (`AzureDigitalTwinsGateway`), no las apps.
 
+> **⚠️ Las clases `.cs` de `integration/dotnet/` son material de REFERENCIA / handoff.**
+> La implementación **canónica y en producción** del ACL vive en el repositorio
+> `web-services` (`SmartPark.Infrastructure/DigitalTwins/AzureDigitalTwinsGateway.cs`),
+> donde está endurecida (modo degradado cuando ADT no responde). Estos snippets sirven
+> como punto de partida y documentación del contrato; **no** los edites aquí esperando
+> que afecten al backend.
+>
+> La ingesta de humo del simulador se autentica con el header `X-Api-Key`, que debe
+> coincidir con `Ingest:ApiKey` del Web Service (ver `.env.example`).
+
 ```
                          ┌──────────────────────────┐
   Sensores / Simulador ─▶│  Azure Digital Twins      │◀─── 3D Scenes Studio (visor 3D)
