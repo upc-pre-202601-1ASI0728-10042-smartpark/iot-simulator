@@ -89,6 +89,7 @@ azureDigitalTwin/
 │   ├── 03-seed-graph.mjs          ← siembra/borra el grafo
 │   ├── 04-upload-3d-model.ps1     ← sube .glb + escena
 │   ├── verify-graph.mjs
+│   ├── energy-advisor.mjs         ← zonas de baja ocupación desde el grafo (energía)
 │   └── teardown.ps1
 ├── simulator/
 │   └── index.mjs                  ← simulador IoT (ocupación, humo, flujo, energía)
@@ -166,3 +167,45 @@ cuando termines para borrar todo el resource group.
 | `npm run seed:delete` | Borra todos los twins del grafo |
 | `npm run simulate` | Arranca el simulador IoT |
 | `npm run verify` | Cuenta twins / ocupación / alertas |
+| `npm run advise` | Lista zonas de baja ocupación + recomendación de atenuación (energía) |
+
+---
+
+## Sprint 2 — Flujo vehicular y tendencias de ocupación
+
+El simulador dejó de **voltear plazas al azar**: ahora la ocupación se deriva de un
+**modelo de flujo vehicular por zona**. En cada intervalo, por zona, se calculan
+**entradas** y **salidas** (conteo tipo Poisson) que empujan la ocupación hacia el
+objetivo horario; con esas entradas/salidas se ocupan/liberan plazas concretas y se
+alimentan los **puntos de acceso** (Entry/Exit) y las **rampas** con tráfico real.
+
+Sobre esa serie se calcula una **tendencia de ocupación** por zona (media móvil en
+una ventana configurable) que la **eficiencia energética** usa como base estable —en
+vez de un valor instantáneo ruidoso— para recomendar la atenuación de la iluminación.
+
+**Nuevas propiedades de `ParkingZone`** (DTDL v3, sembradas por defecto):
+
+| Propiedad | Significado |
+|---|---|
+| `entriesLastInterval` / `exitsLastInterval` | Vehículos que entraron / salieron en el último intervalo |
+| `netFlow` | `entries - exits` (positivo = llenándose, negativo = vaciándose) |
+| `avgOccupancyRate` | Media móvil de `occupancyRate` sobre la ventana de tendencia |
+| `occupancyTrend` | `Rising` / `Stable` / `Falling` |
+| `lowOccupancy` | Baja ocupación **sostenida** durante toda la ventana → dispara atenuación |
+| `vehicleFlow` (Telemetry) | Flujo neto de vehículos emitido por intervalo |
+
+**Parámetros nuevos del simulador** (`.env`):
+
+| Variable | Por defecto | Qué controla |
+|---|---|---|
+| `SIM_FLOW_INTENSITY` | `1.2` | Intensidad base del flujo (entradas/salidas esperadas por intervalo) |
+| `SIM_TREND_WINDOW` | `6` | Nº de muestras de la media móvil de la tendencia |
+| `SIM_LOW_OCCUPANCY` | `0.25` | Umbral de baja ocupación sostenida (0..1) |
+
+> `SIM_OCCUPANCY_CHURN` quedó obsoleto (reemplazado por el modelo de flujo) y ya no se usa.
+
+**Consumo desde el backend:** el endpoint `/api/v1/energy/recommendations` sigue leyendo
+las `LightingZone`, cuyo `recommendedLevel` ahora refleja la tendencia y la bandera
+`lowOccupancy`. Para inspeccionarlo desde consola sin backend: `npm run advise`
+(deriva las zonas de baja ocupación directamente del grafo). Ver también las nuevas
+consultas de flujo y tendencia en `integration/queries.md`.
