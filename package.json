@@ -14,7 +14,8 @@
     "seed": "node scripts/03-seed-graph.mjs",
     "seed:delete": "node scripts/03-seed-graph.mjs --delete",
     "simulate": "node simulator/index.mjs",
-    "verify": "node scripts/verify-graph.mjs"
+    "verify": "node scripts/verify-graph.mjs",
+    "advise": "node scripts/energy-advisor.mjs"
   },
   "dependencies": {
     "@azure/digital-twins-core": "^1.1.0",

@@ -17,6 +17,20 @@
         { "name": "High", "displayName": "Alta", "enumValue": "High" }
       ]}
     },
+    { "@type": "Property", "name": "entriesLastInterval", "schema": "integer", "writable": true, "description": "Vehiculos que ENTRARON a la zona en el ultimo intervalo (flujo vehicular)." },
+    { "@type": "Property", "name": "exitsLastInterval", "schema": "integer", "writable": true, "description": "Vehiculos que SALIERON de la zona en el ultimo intervalo (flujo vehicular)." },
+    { "@type": "Property", "name": "netFlow", "schema": "integer", "writable": true, "description": "entriesLastInterval - exitsLastInterval. Positivo = llenandose, negativo = vaciandose." },
+    { "@type": "Property", "name": "avgOccupancyRate", "schema": "double", "writable": true, "description": "Media movil de occupancyRate sobre la ventana de tendencia. Base estable para decisiones de eficiencia energetica." },
+    {
+      "@type": "Property", "name": "occupancyTrend", "writable": true, "description": "Direccion de la tendencia de ocupacion derivada de la media movil.",
+      "schema": { "@type": "Enum", "valueSchema": "string", "enumValues": [
+        { "name": "Rising", "displayName": "Subiendo", "enumValue": "Rising" },
+        { "name": "Stable", "displayName": "Estable", "enumValue": "Stable" },
+        { "name": "Falling", "displayName": "Bajando", "enumValue": "Falling" }
+      ]}
+    },
+    { "@type": "Property", "name": "lowOccupancy", "schema": "boolean", "writable": true, "description": "Baja ocupacion sostenida durante toda la ventana. Bandera que consume la recomendacion de eficiencia energetica." },
+    { "@type": "Telemetry", "name": "vehicleFlow", "schema": "integer", "description": "Flujo neto de vehiculos emitido por intervalo (entradas - salidas)." },
     { "@type": "Relationship", "name": "hasSpace", "displayName": "tiene plaza", "target": "dtmi:com:apextwin:smartpark:ParkingSpace;1" },
     { "@type": "Relationship", "name": "hasLightingZone", "displayName": "tiene zona de iluminacion", "target": "dtmi:com:apextwin:smartpark:LightingZone;1" }
   ]

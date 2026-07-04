@@ -53,6 +53,28 @@ WHERE IS_OF_MODEL(T, 'dtmi:com:apextwin:smartpark:Ramp;1')
   AND T.flowStatus IN ['Moderate', 'Severe']
 ```
 
+### Flujo vehicular por zona (entradas/salidas del ultimo intervalo)
+```sql
+SELECT T.$dtId, T.code, T.entriesLastInterval, T.exitsLastInterval, T.netFlow
+FROM digitaltwins T
+WHERE IS_OF_MODEL(T, 'dtmi:com:apextwin:smartpark:ParkingZone;1')
+```
+
+### Zonas de baja ocupacion sostenida (base de la recomendacion energetica)
+```sql
+SELECT T.$dtId, T.code, T.avgOccupancyRate, T.occupancyTrend
+FROM digitaltwins T
+WHERE IS_OF_MODEL(T, 'dtmi:com:apextwin:smartpark:ParkingZone;1')
+  AND T.lowOccupancy = true
+```
+
+### Tendencia de ocupacion por zona (subiendo / estable / bajando)
+```sql
+SELECT * FROM digitaltwins T
+WHERE IS_OF_MODEL(T, 'dtmi:com:apextwin:smartpark:ParkingZone;1')
+  AND T.occupancyTrend = 'Falling'
+```
+
 ### Recorrer todo el grafo desde el lote (validación de relaciones)
 ```sql
 SELECT lot, level, zone, space
